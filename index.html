@@ -6,15 +6,17 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/p-key.png">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="w3-light-grey">
+<link rel="stylesheet" href="styles.css">
 
+<body onload="loadingpage()" class="w3-light-grey">
+  <div id="loader"></div>
+  <div class="animate-bottom" id="myDiv">
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top"  style="max-width:1400px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -24,12 +26,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="me.jpg" style="width:100%" alt="Avatar">
+          <div class="card"><img src="me.jpg" style="width:100%" ><img src="me2.jpg" class="swift" style="width:100%" ></div>
           <div class="w3-display-bottomleft w3-container w3-text-black">
             <h2 style="color: azure;">Santichai Yarasit</h2>
           </div>
         </div>
         <div class="w3-container">
+        
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Developer</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Chachoengsao, TH</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>santichai2959@gmail.com</p>
@@ -45,7 +48,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p>Positive attitude and open mind</p>
           
           <hr>
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>LANGUAGES</b></p>
           <p>English</p>
         
           <p>Thai</p>
@@ -100,14 +103,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><b>EDUCATION</b></h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Bachelor of Information Science</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Suranaree University of Technology, Nakhon Ratchasima  | 2018- present 
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Suranaree University of Technology, Nakhon Ratchasima | 2018 - present 
           </h6>
           <p>Suranaree University of Technology</p>
           <hr>
         </div>
        <div class="w3-container">
           <h5 class="w3-opacity"><b>High School Diploma</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Saint Louis School Chachoengsao, Chachoengsao  | 2015- 2018
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Saint Louis School Chachoengsao, Chachoengsao | 2015 - 2018
           </h6>
           <p>Saint Louis School Chachoengsao</p>
           <hr>
@@ -119,7 +122,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><b>EXTRACURRICULAR ACTIVTIES</b></h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Suranaree University of Technology</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>AI Image Processing   | January 2021</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>AI Image Processing | January 2021</h6>
           <p>Suranaree University of Technology</p>
           <hr>
         </div>
@@ -169,7 +172,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
+<footer  class="w3-container w3-teal w3-center w3-margin-top">
   <p>Find me on social media.</p>
   
  <a href="https://www.facebook.com/santichai.yarasit/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
@@ -178,6 +181,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <p>Powered by Santichai Yarasit</p>
   <p>Template by w3schools</p>
 </footer>
-
+</div>
+<script>
+  var myVar;
+function loadingpage() {
+  myVar = setTimeout(showPage, 2000);
+}
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>  
 </body>
 </html>
